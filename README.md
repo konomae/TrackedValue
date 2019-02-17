@@ -1,5 +1,7 @@
 # TrackedValue
 
+[![Build Status](https://travis-ci.com/konomae/TrackedValue.svg?branch=master)](https://travis-ci.com/konomae/TrackedValue) [![codecov](https://codecov.io/gh/konomae/TrackedValue/branch/master/graph/badge.svg)](https://codecov.io/gh/konomae/TrackedValue) [![cocoapods](https://img.shields.io/cocoapods/v/TrackedValue.svg)](https://cocoapods.org/pods/TrackedValue)
+
 `TrackedValue` is a `struct` that determines whether a value has changed or not.
 
 Original Idea: [ReactorKit#74](https://github.com/ReactorKit/ReactorKit/issues/74#issuecomment-418402997)
