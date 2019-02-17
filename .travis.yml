@@ -7,3 +7,4 @@ jobs:
       xcode_scheme: TrackedValue-Package
       xcode_destination: 'platform=macOS'
       before_install: swift package generate-xcodeproj --enable-code-coverage
+      after_success: bash <(curl -s https://codecov.io/bash)
