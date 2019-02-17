@@ -1,0 +1,9 @@
+jobs:
+  include:
+    - os: osx
+      osx_image: xcode10.1
+      language: swift
+      xcode_project: TrackedValue.xcodeproj
+      xcode_scheme: TrackedValue-Package
+      xcode_destination: 'platform=macOS'
+      before_install: swift package generate-xcodeproj --enable-code-coverage
