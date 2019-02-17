@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'TrackedValue'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'TrackedValue is a struct that determines whether a value has changed or not.'
   s.homepage         = 'https://github.com/konomae/TrackedValue'
   s.license          = { :type => 'MIT', :file => 'LICENSE.txt' }
