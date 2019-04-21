@@ -3,5 +3,6 @@ import XCTest
 import TrackedValueTests
 
 var tests = [XCTestCaseEntry]()
-tests += TrackedValueTests.allTests()
+tests += TrackedValueTests.__allTests()
+
 XCTMain(tests)
