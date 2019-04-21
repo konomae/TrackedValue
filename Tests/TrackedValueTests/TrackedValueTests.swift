@@ -35,11 +35,4 @@ final class TrackedValueTests: XCTestCase {
         v2.value = 1
         XCTAssertNotEqual(v1, v2)
     }
-
-    static var allTests = [
-        ("testInit", testInit),
-        ("testEqual", testEqual),
-        ("testEqualWhenValueModifiedWithDifferentValue", testEqualWhenValueModifiedWithDifferentValue),
-        ("testEqualWhenValueModifiedWithSameValue", testEqualWhenValueModifiedWithSameValue),
-    ]
 }
