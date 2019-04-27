@@ -5,7 +5,21 @@ jobs:
       language: swift
       xcode_project: TrackedValue.xcodeproj
       xcode_scheme: TrackedValue-Package
-      xcode_destination: 'platform=macOS'
+      script: swift test --parallel
+
+    - os: osx
+      osx_image: xcode10.2
+      language: swift
+      xcode_project: TrackedValue.xcodeproj
+      xcode_scheme: TrackedValue-Package
+      script: swift test --parallel
+
+    - os: osx
+      osx_image: xcode10.1
+      language: swift
+      xcode_project: TrackedValue.xcodeproj
+      xcode_scheme: TrackedValue-Package
+      xcode_destination: platform=iOS Simulator,OS=latest,name=iPhone XS
       before_install: swift package generate-xcodeproj --enable-code-coverage
       after_success: bash <(curl -s https://codecov.io/bash)
 
