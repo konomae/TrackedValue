@@ -28,3 +28,9 @@ jobs:
       env: SWIFT_VERSION=4.2.1
       install: eval "$(curl -sL https://swiftenv.fuller.li/install.sh)"
       script: swift test
+    
+    - os: linux
+      language: generic
+      env: SWIFT_VERSION=5.0
+      install: eval "$(curl -sL https://swiftenv.fuller.li/install.sh)"
+      script: swift test --parallel
