@@ -4,16 +4,12 @@ jobs:
       os: osx
       osx_image: xcode10.1
       language: swift
-      xcode_project: TrackedValue.xcodeproj
-      xcode_scheme: TrackedValue-Package
       script: swift test --parallel
 
     - name: macOS / Swift 5.0
       os: osx
       osx_image: xcode10.2
       language: swift
-      xcode_project: TrackedValue.xcodeproj
-      xcode_scheme: TrackedValue-Package
       script: swift test --parallel
 
     - name: iOS / Swift 4.2.1
