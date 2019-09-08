@@ -1,6 +1,6 @@
 # TrackedValue
 
-[![Build Status](https://github.com/konomae/TrackedValue/workflows/CI/badge.svg)](https://travis-ci.com/konomae/TrackedValue) [![codecov](https://codecov.io/gh/konomae/TrackedValue/branch/master/graph/badge.svg)](https://codecov.io/gh/konomae/TrackedValue) [![cocoapods](https://img.shields.io/cocoapods/v/TrackedValue.svg)](https://cocoapods.org/pods/TrackedValue)
+[![Build Status](https://github.com/konomae/TrackedValue/workflows/CI/badge.svg)](https://github.com/konomae/TrackedValue/actions) [![codecov](https://codecov.io/gh/konomae/TrackedValue/branch/master/graph/badge.svg)](https://codecov.io/gh/konomae/TrackedValue) [![cocoapods](https://img.shields.io/cocoapods/v/TrackedValue.svg)](https://cocoapods.org/pods/TrackedValue)
 
 `TrackedValue` is a `struct` that determines whether a value has changed or not.
 
