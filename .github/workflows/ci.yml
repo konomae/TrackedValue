@@ -1,10 +1,14 @@
 name: CI
 
-on: [push, pull_request]
+on:
+  push:
+    branches:
+      - master
+  pull_request:
 
 jobs:
   test-ios:
-    runs-on: macOS-latest
+    runs-on: macos-latest
     steps:
     - uses: actions/checkout@v1
 
@@ -16,7 +20,7 @@ jobs:
         set -o pipefail && xcodebuild clean build test \
           -project "TrackedValue.xcodeproj" \
           -scheme "TrackedValue-Package" \
-          -destination "platform=iOS Simulator,OS=latest,name=iPhone XS" | xcpretty -c
+          -destination "platform=iOS Simulator,OS=latest,name=iPhone 11" | xcpretty -c
 
     - name: Upload Code Coverage
       run: |
@@ -25,12 +29,12 @@ jobs:
         CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
 
   test-macos:
-    runs-on: macOS-latest
+    runs-on: macos-latest
     strategy:
       matrix:
         xcode:
-          - /Applications/Xcode_10.3.app
-          - /Applications/Xcode_10.1.app
+          - /Applications/Xcode_11.2.app
+          - /Applications/Xcode_11.1.app
     steps:
     - uses: actions/checkout@v1
 
@@ -46,8 +50,7 @@ jobs:
     strategy:
       matrix:
         swift_version:
-          - "5.0"
-          - "4.2.1"
+          - "5.1"
     steps:
     - uses: actions/checkout@v1
     
