@@ -10,6 +10,7 @@ extension TrackedValueTests {
         ("testEqualWhenValueModifiedWithDifferentValue", testEqualWhenValueModifiedWithDifferentValue),
         ("testEqualWhenValueModifiedWithSameValue", testEqualWhenValueModifiedWithSameValue),
         ("testInit", testInit),
+        ("testSubscript", testSubscript),
     ]
 }
 
