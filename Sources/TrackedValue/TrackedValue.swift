@@ -1,5 +1,6 @@
 private final class Token {}
 
+@dynamicMemberLookup
 public struct TrackedValue<Value>: Equatable {
     private var token: Token
 
@@ -7,6 +8,10 @@ public struct TrackedValue<Value>: Equatable {
         didSet {
             self.token = Token()
         }
+    }
+
+    public subscript<U>(dynamicMember keyPath: KeyPath<Value, U>) -> U {
+        value[keyPath: keyPath]
     }
 
     public init(_ value: Value) {

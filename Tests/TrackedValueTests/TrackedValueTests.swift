@@ -35,4 +35,14 @@ final class TrackedValueTests: XCTestCase {
         v2.value = 1
         XCTAssertNotEqual(v1, v2)
     }
+
+    func testSubscript() {
+        struct Point {
+            let x, y: Int
+        }
+
+        let v = TrackedValue(Point(x: 1, y: 2))
+        XCTAssertEqual(v.x, 1)
+        XCTAssertEqual(v.y, 2)
+    }
 }
