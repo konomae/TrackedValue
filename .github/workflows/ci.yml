@@ -10,7 +10,7 @@ jobs:
   test-ios:
     runs-on: macos-latest
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v2
 
     - name: Generate Xcode Project
       run: swift package generate-xcodeproj --enable-code-coverage
@@ -36,7 +36,7 @@ jobs:
           - /Applications/Xcode_11.2.app
           - /Applications/Xcode_11.1.app
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v2
 
     - name: Test
       run: |
@@ -52,7 +52,7 @@ jobs:
         swift_version:
           - "5.1"
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v2
     
     - name: Test
       run: |
